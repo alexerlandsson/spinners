@@ -1,2 +1,3 @@
-# spinners
-Collection of simple, easy-to-use HTML spinners
+# Spinners
+
+Collection of simple, easy-to-use HTML spinners.

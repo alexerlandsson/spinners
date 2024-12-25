@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spinner Mono</title>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100dvh;
+      margin: 0;
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+
+    .spinner {
+      --_size: 3rem;
+      --_color-primary: #000;
+      --_color-secondary: rgba(0, 0, 0, 0.1);
+      --_thickness: 25%;
+      --_tail-length: 30%;
+      --_speed: 800ms;
+
+      display: block;
+      width: var(--_size);
+      height: var(--_size);
+      border-radius: 50%;
+      background-image: conic-gradient(
+        var(--_color-secondary) calc(100% - var(--_tail-length)),
+        var(--_color-primary)
+      );
+      mask-image: radial-gradient(
+        circle closest-side,
+        transparent calc(100% - var(--_thickness)),
+        black calc(100% - var(--_thickness)),
+        #000 100%
+      );
+      animation: rotate var(--_speed) linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="spinner" role="status" aria-live="polite" aria-label="Loading"></div>
+</html>
+</html>
