@@ -7,21 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
+  <link rel="stylesheet" href="base.css" />
+
   <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100dvh;
-      margin: 0;
-    }
-
     @keyframes rotate {
       to {
         transform: rotate(1turn);
@@ -50,7 +38,7 @@
       mask-image: radial-gradient(
         circle closest-side,
         transparent calc(100% - var(--_thickness)),
-        black calc(100% - var(--_thickness)),
+        #000 calc(100% - var(--_thickness)),
         #000 100%
       );
       animation: rotate var(--_speed) linear infinite;
